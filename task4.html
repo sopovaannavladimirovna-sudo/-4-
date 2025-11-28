@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Природа вокруг нас</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Собственные стили -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Блок 1: Шапка с навигацией -->
+<header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">NatureWorld</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a class="nav-link" href="#">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">О природе</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Галерея</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Экопроекты</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- Блок 2: Главный экран (Hero) -->
+<section class="hero text-center">
+    <div class="container">
+        <h1 class="hero-title">Красота природы</h1>
+        <p class="hero-subtitle">Исследуйте удивительный мир вокруг нас</p>
+        <a href="#" class="btn btn-lg custom-btn">Начать путешествие</a>
+    </div>
+</section>
+
+<!-- Блок 3: О природе -->
+<section class="about py-5">
+    <div class="container">
+        <h2 class="section-title">Почему важна природа?</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p class="about-text">Природа — это источник жизни, вдохновения и гармонии. Она даёт нам воздух, воду, пищу и красоту.</p>
+                <ul class="facts">
+                    <li>Более 8 млн видов живых существ</li>
+                    <li>29% суши покрыто лесами</li>
+                    <li>97% воды — океаны и моря</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <img src="лес.jpg" alt="Лес" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Блок 4: Галерея природы -->
+<section class="gallery py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title">Галерея природы</h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="gallery-item">
+                    <img src="горы.jpg" alt="Горы" class="img-fluid">
+                    <p class="caption">Горные вершины</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="gallery-item">
+                    <img src="река.jpg" alt="Река" class="img-fluid">
+                    <p class="caption">Речные просторы</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="gallery-item">
+                    <img src="поле.jpeg" alt="Поле" class="img-fluid">
+                    <p class="caption">Золотые поля</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Блок 5: Экопроекты -->
+<section class="projects py-5">
+    <div class="container">
+        <h2 class="section-title">Наши экопроекты</h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="project-card">
+                    <h3>Посадка деревьев</h3>
+                    <p>Ежегодно высаживаем тысячи саженцев в лесах и городах.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="project-card">
+                    <h3>Очистка водоёмов</h3>
+                    <p>Организуем волонтёрские акции по уборке берегов рек и озёр.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="project-card">
+                    <h3>Экопросвещение</h3>
+                    <p>Проводим лекции и мастер‑классы о защите природы.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Блок 6: Цитаты о природе — КАРУСЕЛЬ -->
+<section class="quotes py-5 bg-primary text-white text-center">
+    <div class="container">
+        <h2 class="section-title text-white">Мудрые слова</h2>
+        <div id="quoteCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="quote">«Природа не спешит, но всё успевает». — Лао‑цзы</div>
+                </div>
+                <div class="carousel-item">
+                    <div class="quote">«Охранять природу — значит охранять Родину». — М. Пришвин</div>
+                </div>
+                <div class="carousel-item">
+                    <div class="quote">«Земля — наш общий дом». — Неизвестный автор</div>
+                </div>
+            </div>
+
+            <!-- Индикаторы -->
+            <ol class="carousel-indicators">
+                <li data-target="#quoteCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#quoteCarousel" data-slide-to="1"></li>
+                <li data-target="#quoteCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Стрелки -->
+            <a class="carousel-control-prev" href="#quoteCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Предыдущая</span>
+            </a>
+            <a class="carousel-control-next" href="#quoteCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Следующая</span>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- Блок 7: Новости природы -->
+<section class="news py-5">
+    <div class="container">
+        <h2 class="section-title">Новости природы</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 card-bright">
+                    <img src="заповед.jpg" class="card-img-top" alt="Новая заповедная зона">
+                    <div class="card-body">
+                        <h5 class="card-title">Создана новая заповедная зона</h5>
+                        <p class="card-text">В регионе X учреждён природный заповедник площадью 10 000 га для защиты редких видов флоры и фауны.</p>
+                        <a href="#" class="btn btn-sm btn-outline-primary">Читать далее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 card-bright">
+                    <img src="миграция.jpg" class="card-img-top" alt="Миграция птиц">
+                    <div class="card-body">
+                        <h5 class="card-title">Сезон миграции птиц начался</h5>
+                        <p class="card-text">Орнитологи отмечают массовый пролёт перелётных птиц через регион Y. Наблюдения доступны онлайн.</p>
+                        <a href="#" class="btn btn-sm btn-outline-primary">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 card-bright">
+                    <img src="эко.jpg" class="card-img-top" alt="Экофестиваль">
+                    <div class="card-body">
+                        <h5 class="card-title">Экофестиваль «Зелёная волна»</h5>
+                        <p class="card-text">15–17 сентября пройдёт фестиваль экологических инициатив с мастер‑классами и ярмаркой.</p>
+                        <a href="#" class="btn btn-sm btn-outline-primary">Программа</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="#" class="btn custom-btn">Все новости</a>
+        </div>
+    </div>
+</section>
+<!-- Блок 8: Контакты -->
+<section class="contacts py-5">
+    <div class="container">
+        <h2 class="section-title">Свяжитесь с нами</h2>
+        <div class="row">
+            <div class="col-lg-6">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение</label>
+                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn custom-btn">Отправить</button>
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <div class="contact-info">
+                    <p><strong>Телефон:</strong> +7 (495) 123-45-67</p>
+                    <p><strong>Email:</strong> nature@example.com</p>
+                    <p><strong>Адрес:</strong> г. Москва, ул. Природная, д. 1</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Bootstrap JS (обязательно для карусели и navbar-toggler) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

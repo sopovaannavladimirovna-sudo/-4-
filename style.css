@@ -1,0 +1,276 @@
+/* === CSS Reset === */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* === Цветовые переменные === */
+:root {
+    --green-dark: #228B22;
+    --green-light: #32CD32;
+    --green-bg: #e8f5e9;
+}
+
+/* === Общие стили === */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--green-dark);
+    font-size: 2.2rem;
+}
+
+/* === Изображения: зелёный фон + единый размер === */
+img {
+    background-color: var(--green-dark) !important;
+    object-fit: cover;
+}
+
+.about img,
+.gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* === Кнопка === */
+.custom-btn {
+    background-color: var(--green-dark);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.custom-btn:hover {
+    background-color: #1e7a1e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(34, 139, 34, 0.4);
+}
+
+/* === Шапка === */
+.header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand {
+    font-weight: bold;
+    color: var(--green-dark) !important;
+}
+.nav-link {
+    color: #555 !important;
+    font-weight: 500;
+}
+.nav-link:hover,
+.nav-link.active {
+    color: var(--green-dark) !important;
+}
+
+/* === Блок 2: Hero === */
+.hero {
+    background: linear-gradient(rgba(34, 139, 34, 0.7), rgba(34, 139, 34, 0.8)),
+        url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center / cover;
+    color: #ffffff;
+    padding: 100px 20px;
+}
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* === Блок 3: О природе — СВЕТЛО-ЗЕЛЁНЫЙ ФОН === */
+.about {
+    background-color: #e8f5e9; /* обновлённый фон */
+}
+
+.about-text {
+    margin-bottom: 20px;
+}
+
+.facts {
+    margin-top: 20px;
+    list-style: none;
+}
+.facts li::before {
+    content: "🌿 ";
+    margin-right: 8px;
+}
+
+/* === Блок 4: Галерея — СВЕТЛО-БИРЮЗОВЫЙ ФОН === */
+.gallery {
+    background-color: hsl(81, 72%, 93%); /* обновлённый фон */
+}
+
+.gallery-item {
+    text-align: center;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+.caption {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--green-dark);
+}
+
+/* === Блок 5: Экопроекты === */Ъ
+    /* фон остаётся нейтральным */
+
+.project-card {
+    background: var(--green-bg);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: background 0.3s;
+}
+.project-card:hover {
+    background: hwb(67 83% 7%);
+}
+.project-card h3 {
+    color: var(--green-dark);
+    margin-bottom: 15px;
+}
+
+/* === Блок 6: Цитаты — ТЁМНО-ЗЕЛЁНЫЙ ФОН === */
+.quotes {
+    background: #1b5e20; /* обновлённый, насыщенный зелёный */
+    position: relative;
+    color: white;
+}
+.quote {
+    font-size: 1.4rem;
+    font-style: italic;
+    padding: 25px 40px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    margin: 0 5px;
+}
+.carousel-indicators .active {
+    background-color: white;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+/* Карточки новостей: фиксированная высота и яркий фон */
+.card-bright {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Эффект при наведении */
+.card-bright:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+/* Заголовок карточки — белый текст */
+.card-bright .card-title {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* Текст карточки — полупрозрачный белый */
+.card-bright .card-text {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+}
+
+/* Кнопка в карточке */
+.card-bright .btn-outline-primary {
+    border-color: #fff;
+    color: #fff;
+}
+
+.card-bright .btn-outline-primary:hover {
+    background-color: #fff;
+    color: #667eea;
+}
+
+/* Изображение в карточке — насыщенность и фильтр */
+.card-bright .card-img-top {
+    filter: brightness(0.8) saturate(1.2);
+    transition: filter 0.3s ease;
+}
+
+.card-bright:hover .card-img-top {
+    filter: brightness(1) saturate(1.5);
+}
+
+/* Адаптация для маленьких экранов */
+@media (max-width: 768px) {
+    .card-bright {
+        border-radius: 8px;
+    }
+}
+
+/* === Блок 8: Контакты === */
+.contact-info {
+    background: var(--green-bg);
+    padding: 25px;
+    border-radius: 10px;
+    height: 100%;
+}
+.contact-info p {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+/* === Адаптивность === */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .quote {
+        font-size: 1.1rem;
+        padding: 15px;
+    }
+    .about img,
+    .gallery img {
+        height: 220px;
+    }
+}
